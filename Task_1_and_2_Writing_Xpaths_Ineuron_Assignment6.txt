@@ -1,0 +1,53 @@
+Task-1
+-----------
+//label[text()='Username']//parent::div//following-sibling::div//input
+//input[contains(@name,'name')]
+//input[@placeholder='Username']
+input[name='username']
+input[name*='name']
+input[name$='name']
+input[name^='user']
+
+//input[@placeholder='Password']
+//input[contains(@name,'password')]
+//label[text()='Password']//parent::div//following-sibling::div//input
+input[name^='pass']
+input[name$='word']
+input[name*='ssw']
+input[name='password']
+
+//div/button[contains(@class,'oxd')]
+//div[contains(@class,'oxd')]//following-sibling::button
+//div[contains(@class,'oxd')]//following::div//button
+//button[@type='submit']
+button[type='submit']
+button[type$='mit']
+button[type*='mit']
+
+Task-2
+--------
+User Role:
+//*[text()='User Role']//parent::div//following-sibling::div//div[contains(text(),'Select')][@tabindex='0']
+(//div[contains(text(),'Select')])[1]
+(//div[@class='oxd-select-text-input'])[1]
+
+Status:
+//label[text()='Status']//parent::div//following-sibling::div//div[contains(text(),'Select')]
+(//div[@class='oxd-select-text-input'])[2]
+//label[text()='Status']//following::div[contains(text(),'Select')]
+
+Password:
+//label[text()='Password']//following::input[@type='password'][1]
+//p[@class='oxd-text oxd-text--p user-password-hint']//preceding::input[@type='password']
+(//input[@type='password'])[1]
+
+Employee Name:
+//*[text()='Employee Name']//following::input[contains(@placeholder,'hints')]
+//input[contains(@placeholder,'hints')]
+//label[contains(text(),'Status')]//preceding::input[contains(@placeholder,'...')]
+
+Confirm Password:
+//label[text()='Confirm Password']//parent::div//following-sibling::div//input[@type='password']
+//label[text()='Confirm Password']//following::input[@type='password']
+(//input[@type='password'])[1]
+
